@@ -1,0 +1,9 @@
+.items {
+    display: flex;
+    align-items: center;
+}
+
+.items p{
+    margin: var(--space-small);
+    font-weight: bold;
+}

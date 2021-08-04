@@ -5,6 +5,7 @@
 
 .main-header{
     text-align: center;
+    width: 250px;
     margin: var(--space-medium);
 }
 
