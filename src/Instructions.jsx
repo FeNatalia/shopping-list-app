@@ -5,13 +5,17 @@ export default function Instructions(){
     const buttonLogoURL = buttonLogo.default;
 
     return(
-        <div>
-            <h1>Welcome to EIKA!</h1>
-            <h2>A shopping list app which helps you to stay organized</h2>
-            <div>
+        <div className="main-page">
+            <div className="main-header">
+                <h1>Welcome to EIKA!</h1>
+                <h3>A shopping list app which helps you to stay organized</h3>
+            </div>
+            <div className="card">
+                <div className="card-upper">
                 <img src={photoURL} alt="an organge couch with a pink pillow on it and a net with lemons"/>
-                <div>
-                    <h3>Go to my list</h3>
+                </div>
+                <div className="card-bottom">
+                    <h2>Go to my list</h2>
                     <p>Add shopping items, store and mark them done to archive</p>
                     <img src={buttonLogoURL} alt="a black circle with a white arrow on it"/>
                 </div>

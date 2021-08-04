@@ -3,6 +3,8 @@ export default function Nav(){
     const logoURL = logo.default;
 
     return (
+        <div className="nav">
         <img src={logoURL} alt=""/>
+        </div>
     );
 }

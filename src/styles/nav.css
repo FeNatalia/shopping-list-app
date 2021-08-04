@@ -1,0 +1,10 @@
+.nav img{
+    margin-left: var(--space-small);
+    box-sizing: border-box;
+    height: 50px;
+    width: auto;
+}
+
+.nav{
+    display: flex ;
+}

@@ -1,0 +1,37 @@
+.main-page{
+    display: grid;
+    justify-content: center;
+}
+
+.main-header{
+    text-align: center;
+    margin: var(--space-medium);
+}
+
+.card {
+    display: grid;
+    justify-content: center;
+}
+
+.card-upper{
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-upper img{
+    box-sizing: border-box;
+    width: 250px;
+    height: 178;
+}
+.card-bottom {
+    box-sizing: border-box;
+    width: 250px;
+    height: auto;
+    padding: var(--space-medium);
+    background-color: #F9E9E4;
+}
+.card-bottom img{
+    box-sizing: border-box;
+    height: 50px;
+    width: auto;
+}
