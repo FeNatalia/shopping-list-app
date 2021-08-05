@@ -1,10 +1,10 @@
-import Nav from "./Nav";
-import Instructions from "./Instructions";
+import Nav from "./components/Nav";
+import Instructions from "./components/Instructions";
 import "./styles/style.css";
 import {useState} from "react";
-import ShoppingItem from "./ShoppingItem";
-import CompletedShoppingItem from "./CompletedShoppingItem";
-import Form from "./Form";
+import ShoppingItem from "./components/ShoppingItem";
+import CompletedShoppingItem from "./components/CompletedShoppingItem";
+import Form from "./components/Form";
 
 export default function App() {
 
@@ -12,13 +12,13 @@ export default function App() {
 
 
   function createItem(itemData) {
-      setItems([...items, itemData]);
+    setItems([...items, itemData]);
   }
 
   function markDone(index){
-      const newItems = [...items];
-      newItems[index].isDone = true;
-      setItems(newItems);
+    const newItems = [...items];
+    newItems[index].isDone = true;
+    setItems(newItems);
   }
 
   const UncompletedItems = (items.filter((item) => !item.isDone).map((item,index) =>
