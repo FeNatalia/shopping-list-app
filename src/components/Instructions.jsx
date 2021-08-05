@@ -1,7 +1,7 @@
 export default function Instructions(){
-    const photo = require (`./assets/images/couch.jpg`);
+    const photo = require (`../assets/images/couch.jpg`);
     const photoURL = photo.default;
-    const buttonLogo = require (`./assets/images/go-to.png`);
+    const buttonLogo = require (`../assets/images/go-to.png`);
     const buttonLogoURL = buttonLogo.default;
 
     return(
