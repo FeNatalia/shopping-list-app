@@ -7,3 +7,14 @@
     margin: var(--space-small);
     font-weight: bold;
 }
+
+.completed-items {
+    display: flex;
+    align-items: center;
+    text-decoration: line-through;
+}
+
+.completed-items p{
+    margin: var(--space-small);
+    font-weight: bold;
+}
