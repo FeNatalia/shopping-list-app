@@ -15,19 +15,24 @@ export default function App() {
     setItems([...items, itemData]);
   }
 
-  function markDone(index){
-    const newItems = [...items];
-    newItems[index].isDone = true;
+  function markDone(id){
+    const newItems = [...items].map((item) => {
+      if (item.id === id) {
+        item.isDone = !item.isDone
+      }
+      return item
+    })
     setItems(newItems);
   }
 
-  const UncompletedItems = (items.filter((item) => !item.isDone).map((item,index) =>
-    <ShoppingItem key={index} index={index} item={item} markDone={markDone}/>
+  const UncompletedItems = (items.filter((item) => !item.isDone).map((item) =>
+    <ShoppingItem key={item.id} id={item.id} item={item} markDone={markDone}/>
   ));
 
-  const CompletedItems = (items.filter((item) => item.isDone).map((item,index) =>
-    <CompletedShoppingItem key={index} index={index} item={item}/>
+  const CompletedItems = (items.filter((item) => item.isDone).map((item) =>
+    <CompletedShoppingItem key={item.id} id={item.id} item={item}/>
   ));
+
 
   return (
     <div className="App">
