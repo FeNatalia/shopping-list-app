@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 //local files
 import Nav from "./components/Nav";
@@ -13,7 +13,17 @@ export default function App() {
 
   const [items, setItems] = useState([]);
 
+  useEffect(()=> {
+    const data =localStorage.getItem("items");
+    if (data) {
+      setItems(JSON.parse(data));
+    }
+  }, []);
 
+  useEffect(()=> {
+    localStorage.setItem("items", JSON.stringify(items));
+  }, [items])
+  
   function createItem(itemData) {
     setItems([...items, itemData]);
   }

@@ -7,25 +7,24 @@ export default function Form({ onSubmit }){
     const [isDone, setIsDone] =useState(false);
     const [id, setId] = useState(uuidv4());
 
-    const handleSubmit = () => {
-        onSubmit({
-            name: name,
-            price: price,
-            isDone: isDone,
-            id: id
-        })
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (name === "" || price === ""){
+            console.log("You must write all item details")
+        }
+        else {
+            onSubmit({
+                name: name,
+                price: price,
+                isDone: isDone,
+                id: id
+            })
 
-        setName("");
-        setPrice("");
-        setIsDone(false);
-        setId(uuidv4());
-    }
-
-    const validateForm = () => {
-        const errors = {};
-        if (!name) errors.name = "You must write the item name";
-        if (!price) errors.price = "You must write the item price";
-        return errors;
+            setName("");
+            setPrice("");
+            setIsDone(false);
+            setId(uuidv4());
+        }
     }
 
     return(
