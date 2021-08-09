@@ -1,10 +1,13 @@
+import {useState} from "react";
+
+//local files
 import Nav from "./components/Nav";
 import Instructions from "./components/Instructions";
-import "./styles/style.css";
-import {useState} from "react";
 import ShoppingItem from "./components/ShoppingItem";
-import CompletedShoppingItem from "./components/CompletedShoppingItem";
 import Form from "./components/Form";
+
+//styles
+import "./styles/style.css";
 
 export default function App() {
 
@@ -26,26 +29,26 @@ export default function App() {
   }
 
   const UncompletedItems = (items.filter((item) => !item.isDone).map((item) =>
-    <ShoppingItem key={item.id} id={item.id} item={item} markDone={markDone}/>
+    <ShoppingItem key={item.id} item={item} markDone={markDone}/>
   ));
 
   const CompletedItems = (items.filter((item) => item.isDone).map((item) =>
-    <CompletedShoppingItem key={item.id} id={item.id} item={item}/>
+    <ShoppingItem key={item.id} item={item}/>
   ));
 
 
   return (
     <div className="App">
       <Nav/>
-      {items.length === 0 ? <Instructions/> :
+      {items.length === 0 ? <Instructions/> : null}
+      <Form onSubmit={(itemData)=> createItem(itemData)}/>
+      {items.length !== 0 ?
       <div className="main-page">
         <h1>My shopping list</h1>
-        <Form onSubmit={(itemData)=> createItem(itemData)}/> 
         {UncompletedItems}
         <h3>Completed items</h3>
         {CompletedItems}
-      </div>}
-      {items.length ===0 ? <Form onSubmit={(itemData)=> createItem(itemData)}/> : null}
+      </div> : null}
     </div>
   );
 }
