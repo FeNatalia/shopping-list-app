@@ -1,8 +1,6 @@
+import photo from "../assets/images/couch.jpg";
+
 export default function Instructions(){
-    const photo = require (`../assets/images/couch.jpg`);
-    const photoURL = photo.default;
-    const buttonLogo = require (`../assets/images/go-to.png`);
-    const buttonLogoURL = buttonLogo.default;
 
     return(
         <div className="main-page">
@@ -12,12 +10,11 @@ export default function Instructions(){
             </div>
             <div className="card">
                 <div className="card-upper">
-                <img src={photoURL} alt="an organge couch with a pink pillow on it and a net with lemons"/>
+                <img src={photo} alt="an orange couch with a pink pillow on it and a net with lemons"/>
                 </div>
                 <div className="card-bottom">
                     <h2>Start now</h2>
                     <p>Add shopping items in a form below, store and mark them done to archive</p>
-                    {/*<img src={buttonLogoURL} alt="a black circle with a white arrow on it"/>*/}
                 </div>
             </div>
         </div>
