@@ -12,6 +12,8 @@ import "./styles/style.css";
 export default function App() {
 
   const [items, setItems] = useState([]);
+  const [toggleForm, setToggleForm] = useState(false);
+  const [toggleCompletedList, setCompletedList] = useState(false);
 
   useEffect(()=> {
     const data =localStorage.getItem("items");
@@ -51,13 +53,21 @@ export default function App() {
     <div className="App">
       <Nav/>
       {items.length === 0 ? <Instructions/> : null}
-      <Form onSubmit={(itemData)=> createItem(itemData)}/>
       {items.length !== 0 ?
       <div className="main-page">
         <h1>My shopping list</h1>
         {UncompletedItems}
-        <h3>Completed items</h3>
-        {CompletedItems}
+      </div> : null}
+      <button onClick={()=> toggleForm ? setToggleForm(false) : setToggleForm(true)}>
+        Add
+      </button>
+      {toggleForm && (<Form onSubmit={(itemData)=> createItem(itemData)}/>)}
+      {CompletedItems.length > 0 ?
+      <div>
+        <p onClick={()=> toggleCompletedList ? setCompletedList(false) : setCompletedList(true)}>
+          View completed items
+        </p>
+        {toggleCompletedList && CompletedItems}
       </div> : null}
     </div>
   );
