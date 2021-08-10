@@ -52,18 +52,27 @@ export default function App() {
   return (
     <div className="App">
       <Nav/>
+      {/*This shows welcome and instructions if the list is empty*/}
       {items.length === 0 ? <Instructions/> : null}
+      {/*This shows a shopping list items if the list is not empty */}
       {items.length !== 0 ?
       <div className="main-page">
         <h1>My shopping list</h1>
+        <div className="sorting">
+          <p>Sort by:</p>
+          <p className="underline">Name</p>
+          <p className="underline">Price</p>
+        </div>
         {UncompletedItems}
       </div> : null}
+      {/*Add item form is always present */}
       <div className="main-page">
-      <button onClick={()=> toggleForm ? setToggleForm(false) : setToggleForm(true)}>
-        Add item
-      </button>
-      {toggleForm && (<Form onSubmit={(itemData)=> createItem(itemData)}/>)}
+        <button onClick={()=> toggleForm ? setToggleForm(false) : setToggleForm(true)}>
+          Add item
+        </button>
+        {toggleForm && (<Form onSubmit={(itemData)=> createItem(itemData)}/>)}
       </div>
+      {/*This shows completed items if it is not empty*/}
       {CompletedItems.length > 0 ?
       <div className="main-page">
         <p className="underline" onClick={()=> toggleCompletedList ? setCompletedList(false) : setCompletedList(true)}>
