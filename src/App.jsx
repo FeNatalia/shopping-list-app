@@ -58,13 +58,15 @@ export default function App() {
         <h1>My shopping list</h1>
         {UncompletedItems}
       </div> : null}
+      <div className="main-page">
       <button onClick={()=> toggleForm ? setToggleForm(false) : setToggleForm(true)}>
-        Add
+        Add item
       </button>
       {toggleForm && (<Form onSubmit={(itemData)=> createItem(itemData)}/>)}
+      </div>
       {CompletedItems.length > 0 ?
-      <div>
-        <p onClick={()=> toggleCompletedList ? setCompletedList(false) : setCompletedList(true)}>
+      <div className="main-page">
+        <p className="underline" onClick={()=> toggleCompletedList ? setCompletedList(false) : setCompletedList(true)}>
           View completed items
         </p>
         {toggleCompletedList && CompletedItems}

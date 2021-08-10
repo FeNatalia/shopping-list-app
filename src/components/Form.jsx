@@ -28,7 +28,7 @@ export default function Form({ onSubmit }){
     }
 
     return(
-        <div className="main-page">
+        <div>
         <form>
             <h3>Add a new shopping item:</h3>
             <input type="text" placeholder="Item Name" value={name} onChange={(e) => setName(e.target.value)}/>
