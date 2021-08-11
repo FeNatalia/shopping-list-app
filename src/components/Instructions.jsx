@@ -14,7 +14,7 @@ export default function Instructions(){
                 </div>
                 <div className="card-bottom">
                     <h2>Start now</h2>
-                    <p>Add shopping items in a form below, store and mark them done to archive</p>
+                    <p>Add shopping items by clicking the button below, store and mark them done to archive</p>
                 </div>
             </div>
         </div>

@@ -1,3 +1,14 @@
+.nav img{
+    margin-left: var(--space-small);
+    box-sizing: border-box;
+    height: 50px;
+    width: auto;
+}
+
+.nav{
+    display: flex ;
+}
+
 .main-page{
     display: grid;
     justify-content: center;
@@ -7,6 +18,12 @@
     text-align: center;
     width: 250px;
     margin: var(--space-medium);
+}
+
+.main-form {
+    display: grid;
+    justify-content: center;
+    text-align: center;
 }
 
 .card {

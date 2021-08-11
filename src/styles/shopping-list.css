@@ -18,3 +18,8 @@
     margin: var(--space-small);
     font-weight: bold;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
