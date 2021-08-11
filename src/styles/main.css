@@ -9,6 +9,11 @@
     margin: var(--space-medium);
 }
 
+.main-form {
+    text-align: center;
+    width: 250px;
+}
+
 .card {
     display: grid;
     justify-content: center;

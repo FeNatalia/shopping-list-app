@@ -60,10 +60,10 @@ export default function App() {
       {items.length !== 0 ? <Uncompleted UncompletedItems={UncompletedItems}/> : null}
       
       {/*Add item form is always present */}
-      <div className="main-page">
-        <button onClick={()=> toggleForm ? setToggleForm(false) : setToggleForm(true)}>
-          Add item
-        </button>
+      <div className="main-form">
+          <button onClick={()=> toggleForm ? setToggleForm(false) : setToggleForm(true)}>
+            Add item
+          </button>
         {toggleForm && (<Form onSubmit={(itemData)=> createItem(itemData)}/>)}
       </div>
       

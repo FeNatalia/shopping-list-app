@@ -29,12 +29,10 @@ export default function Form({ onSubmit }){
 
     return(
         <div>
-        <form>
-            <h3>Add a new shopping item:</h3>
-            <input type="text" placeholder="Item Name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <input type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)}/>
-            <button type="button" onClick={handleSubmit}>Ok</button>
-        </form>
+                <h3>Add a new shopping item:</h3>
+                <input type="text" placeholder="Item Name" value={name} onChange={(e) => setName(e.target.value)}/>
+                <input type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)}/>
+                <button type="button" onClick={handleSubmit}>Ok</button>
         </div>
     )
 }
