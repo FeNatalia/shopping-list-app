@@ -1,3 +1,11 @@
+.sorting{
+    display: flex;
+}
+
+.sorting p{
+    margin: var(--space-small);
+}
+
 .items {
     display: flex;
     align-items: center;

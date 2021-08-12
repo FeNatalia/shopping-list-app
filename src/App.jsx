@@ -37,6 +37,21 @@ export default function App() {
     })
     setItems(newItems);
   }
+
+  function sortListByName() {
+    const sorted = items.sort((a,b) => a.name > b.name);
+
+    setItems([...sorted]);
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
+  function sortListByPrice() {
+    const sorted = items.sort((a,b) => a.price - b.price);
+
+    setItems([...sorted]);
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+
   //Lists
   const UncompletedItems = (items.filter((item) => !item.isDone).map((item) =>
     <ShoppingItem key={item.id} item={item} markDone={markDone}/>
@@ -54,6 +69,11 @@ export default function App() {
       {items.length === 0 ? <Instructions/> :
       <div className="main-page">
         <h1>My shopping list</h1>
+        <div className="sorting">
+          <p>Sort by:</p>
+          <p className="underline" onClick={sortListByName}>Name</p>
+          <p className="underline" onClick={sortListByPrice}>Price</p>
+        </div>
         {UncompletedItems}
       </div>}
       {/*Add item form is always present */}
