@@ -9,10 +9,13 @@ export default function Form({ onSubmit }){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (name === "" || price === ""){
-            console.log("You must write all item details")
+        if (price<=0) {
+            return alert("The price must be a number which is more than 0");
         }
-        else {
+        if (name.trim() === "" || price.trim() === ""){
+            return alert("You must write all item details");
+        } else 
+        {
             onSubmit({
                 name: name,
                 price: price,
