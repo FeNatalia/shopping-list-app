@@ -1,6 +1,8 @@
-import photo from "../assets/images/couch.jpg";
+// Project files
+import Photo from "../assets/images/couch.jpg";
+import Button from "./Button";
 
-export default function Instructions(){
+export default function Instructions({items, setItems}){
 
     return(
         <div className="main-page">
@@ -10,13 +12,14 @@ export default function Instructions(){
             </div>
             <div className="card">
                 <div className="card-upper">
-                <img src={photo} alt="an orange couch with a pink pillow on it and a net with lemons"/>
+                <img src={Photo} alt="an orange couch with a pink pillow on it and a net with lemons"/>
                 </div>
                 <div className="card-bottom">
                     <h2>Start now</h2>
                     <p>Add shopping items by clicking the button below, store and mark them done to archive</p>
                 </div>
             </div>
+            <Button items={items} setItems={setItems}/>
         </div>
     );
 }

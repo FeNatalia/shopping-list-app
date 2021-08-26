@@ -3,7 +3,7 @@
 }
 
 .sorting p{
-    margin: var(--space-small);
+    margin: var(--space-medium);
 }
 
 .items {
@@ -28,6 +28,10 @@
 }
 
 .underline {
+    margin: var(--space-medium);
     text-decoration: underline;
+    font-size: 16px;
+    background-color: white;
+    border: white;
 }
 

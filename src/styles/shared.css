@@ -12,6 +12,7 @@ body{
     max-width: 1024px;
     margin: 0 auto;
     padding: var(--space-medium);
+    text-align: center;
 } 
 
 h1{
@@ -34,7 +35,7 @@ p{
     font-weight: normal;   
 }
 
-button{
+.button-main{
     margin: var(--space-medium);
     width: 110px;
     height: 30px;
