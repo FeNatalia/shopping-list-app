@@ -58,7 +58,7 @@ Open http://localhost:3000 to view it in the browser.
 
 The diagram/component tree of the project structure: 
 
-(https://github.com/FeNatalia/shopping-list-app/blob/main/src/assets/diagram/ComponentTree.png)
+![a diagram showing the project structure](https://github.com/FeNatalia/shopping-list-app/blob/main/src/assets/diagram/ComponentTree.png)
 
 ## Link
 
