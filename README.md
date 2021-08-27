@@ -54,6 +54,12 @@ It would compile the project before you would run it. After this go to the next 
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
+## Diagram
+
+The diagram/component tree of the project structure: 
+
+(https://github.com/FeNatalia/shopping-list-app/blob/main/src/assets/diagram/ComponentTree.png)
+
 ## Link
 
 EIKA is hosted on: https://shopping-list-eika.web.app
