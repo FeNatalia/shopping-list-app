@@ -1,7 +1,7 @@
 export default function Sorter({ items, setItems }) {
   // Methods
   function sortListByName() {
-    const sorted = items.sort((a, b) => a.name > b.name);
+    const sorted = items.sort((a,b) => a.name.localeCompare(b.name));
 
     setItems([...sorted]);
     localStorage.setItem("items", JSON.stringify(items));
